@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Old portfolio subfolder
+MyPortfolio/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System
+*.log

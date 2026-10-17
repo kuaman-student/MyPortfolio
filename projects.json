@@ -1,0 +1,149 @@
+{
+  "projects": [
+    {
+      "id": "DEV-01",
+      "title": "StudyOS",
+      "category": "code",
+      "badge": "FEATURED",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80",
+      "link": "https://github.com/kuaman-student/StudyOS",
+      "github": "https://github.com/kuaman-student/StudyOS",
+      "description": "Feature-rich Python terminal study application with task management, analytics, user profile JSON configuration, and customizable color themes.",
+      "tags": ["Python", "CLI", "JSON", "Terminal"]
+    },
+    {
+      "id": "DEV-02",
+      "title": "SimCompanies Tools",
+      "category": "code",
+      "badge": "AUTOMATION",
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
+      "link": "https://github.com/kuaman-student/simcompanies-tools",
+      "github": "https://github.com/kuaman-student/simcompanies-tools",
+      "description": "Real-time market monitoring and automation tool for SimCompanies — Firebase RTDB, price analytics, alert system.",
+      "tags": ["Python", "Firebase", "REST APIs", "Automation"]
+    },
+    {
+      "id": "DEV-03",
+      "title": "Engineering Branch Explorer",
+      "category": "code",
+      "badge": "WEB APP",
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=80",
+      "link": "https://github.com/kuaman-student/engineering-branch-explorer",
+      "github": "https://github.com/kuaman-student/engineering-branch-explorer",
+      "description": "Interactive web app to explore IIT engineering branches, admission cutoffs, curriculum insights, and career directions.",
+      "tags": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "DEV-04",
+      "title": "Quiz Master Arena",
+      "category": "code",
+      "badge": "WEB APP",
+      "image": "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=800&auto=format&fit=crop&q=80",
+      "link": "https://github.com/kuaman-student/quiz-master-arena",
+      "github": "https://github.com/kuaman-student/quiz-master-arena",
+      "description": "Modern web-based MCQ answer checker with custom answer keys, countdown timer, instant analytics, and detailed review.",
+      "tags": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "DEV-05",
+      "title": "JEE Ultimate Tracker",
+      "category": "code",
+      "badge": "DASHBOARD",
+      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+      "link": "https://github.com/kuaman-student/jee-ultimate-tracker",
+      "github": "https://github.com/kuaman-student/jee-ultimate-tracker",
+      "description": "Web dashboard for JEE prep — subject-wise syllabus tracking, daily study hours, test analytics, and countdown.",
+      "tags": ["JavaScript", "HTML", "CSS"]
+    },
+    {
+      "id": "DEV-06",
+      "title": "PlanMyClass",
+      "category": "code",
+      "badge": "WEB APP",
+      "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=80",
+      "link": "https://github.com/kuaman-student/PlanMyClass",
+      "github": "https://github.com/kuaman-student/PlanMyClass",
+      "description": "Classroom planning app for timetable organization and lecture scheduling.",
+      "tags": ["JavaScript", "HTML", "CSS"]
+    },
+    {
+      "id": "DEV-07",
+      "title": "Oncology Analytics Portal",
+      "category": "code",
+      "badge": "DATA",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80",
+      "link": "https://github.com/kuaman-student/Oncology-Analytics-Portal",
+      "github": "https://github.com/kuaman-student/Oncology-Analytics-Portal",
+      "description": "Python-based analytics application for exploring medical oncology data patterns and patient record insights.",
+      "tags": ["Python", "Data Analysis", "Healthcare"]
+    },
+    {
+      "id": "DEV-08",
+      "title": "C++ & DSA Practice",
+      "category": "code",
+      "badge": "ALGORITHMS",
+      "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
+      "link": "https://github.com/kuaman-student/cpp-dsa-striver",
+      "github": "https://github.com/kuaman-student/cpp-dsa-striver",
+      "description": "Daily C++ and DSA practice following Striver's A2Z sheet — sorting, searching, graphs, DP, and more.",
+      "tags": ["C++", "DSA", "Algorithms"]
+    }
+  ],
+  "_hidden_projects": [
+    {
+      "id": "DSG-01",
+      "title": "Dreamy Choco — Packaging Design",
+      "category": "design",
+      "tool": "canva",
+      "badge": "DESIGN",
+      "image": "https://snipboard.io/mOGxc5.jpg",
+      "link": "https://canva.link/yx46m58r84vh0c3",
+      "description": "Full packaging design for a blackberry-flavored chocolate bar — front, back, in-use shots, and a matching thank-you card.",
+      "tags": ["Canva", "Packaging"]
+    },
+    {
+      "id": "DSG-02",
+      "title": "Four Dots — Game Logo",
+      "category": "design",
+      "tool": "canva",
+      "badge": "LOGO",
+      "image": "https://snipboard.io/0jXbgr.jpg",
+      "link": "https://canva.link/ao82ncevmt6b6rs",
+      "description": "Circular node-based logo for the game Four Dots.",
+      "tags": ["Canva", "Logo"]
+    },
+    {
+      "id": "DSG-03",
+      "title": "DMC App — UI Design",
+      "category": "design",
+      "tool": "figma",
+      "badge": "UI/UX",
+      "image": "https://snipboard.io/3fP0rM.jpg",
+      "link": "https://www.figma.com/design/UQK84vxVKmVoeKnKkgAR0z",
+      "description": "Complete mobile UI flow — login, permissions, club screens, and error states.",
+      "tags": ["Figma", "Mobile UI"]
+    },
+    {
+      "id": "DSG-04",
+      "title": "TechGenHub — Blog Logo",
+      "category": "design",
+      "tool": "canva",
+      "badge": "LOGO",
+      "image": "https://snipboard.io/TW9pCG.jpg",
+      "link": "https://canva.link/s02c82ykh7ladt2",
+      "description": "Circuit-styled lion logo for TechGenHub blog.",
+      "tags": ["Canva", "Logo", "Branding"]
+    },
+    {
+      "id": "DSG-05",
+      "title": "Truecaller — App Prototype",
+      "category": "design",
+      "tool": "figma",
+      "badge": "PROTOTYPE",
+      "image": "https://snipboard.io/8RDgsS.jpg",
+      "link": "https://www.figma.com/design/FmtayQfA7P7kPXGWeQh2tQ",
+      "description": "Complete mobile UI prototype for Truecaller app — Figma.",
+      "tags": ["Figma", "Prototype"]
+    }
+  ]
+}

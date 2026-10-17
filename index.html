@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aman Kumar | Electrical Engineering @ IIT Mandi — Portfolio</title>
+  <meta name="description" content="Portfolio of Aman Kumar, Electrical Engineering undergraduate at IIT Mandi. Systems, software engineering, low-level architecture, web development, and UI/UX design.">
+  <meta name="keywords" content="Aman Kumar, IIT Mandi, Electrical Engineering, Software Engineer, Python, C++, Web Development, Portfolio">
+  <meta name="author" content="Aman Kumar">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aman Kumar | Portfolio — IIT Mandi">
+  <meta property="og:description" content="Electrical Engineering Undergraduate @ IIT Mandi | Python, C++, Web Dev & UI/UX">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/301948178?v=4">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container">
+      <a href="#hero" class="brand-logo" aria-label="Aman Kumar Homepage">
+        <span class="brand-prompt">~</span>
+        <span class="brand-name">aman<span class="accent-dot">.</span>dev</span>
+        <span class="brand-tag">IIT Mandi</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link"><span class="nav-num">01.</span>About</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-num">02.</span>Skills</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-num">03.</span>Projects</a></li>
+          <li><a href="#github" class="nav-link"><span class="nav-num">04.</span>GitHub</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-num">05.</span>Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Admin Badge (Shown if ?admin=true) -->
+        <div class="admin-badge-indicator" id="adminHeaderBadge" style="display: none;">
+          <span class="admin-pulse"></span>
+          <span>ADMIN MODE</span>
+        </div>
+
+        <a href="#contact" class="btn btn-sm btn-outline nav-cta">Let's Connect</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+      <ul class="nav-mobile-list">
+        <li><a href="#about" class="nav-mobile-link"><span class="nav-num">01.</span>About</a></li>
+        <li><a href="#skills" class="nav-mobile-link"><span class="nav-num">02.</span>Skills</a></li>
+        <li><a href="#projects" class="nav-mobile-link"><span class="nav-num">03.</span>Projects</a></li>
+        <li><a href="#github" class="nav-mobile-link"><span class="nav-num">04.</span>GitHub</a></li>
+        <li><a href="#contact" class="nav-mobile-link"><span class="nav-num">05.</span>Contact</a></li>
+      </ul>
+      <div class="mobile-cta-box">
+        <a href="#contact" class="btn btn-primary btn-block">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <!-- Telemetry Status Pill -->
+        <div class="status-pill reveal">
+          <span class="status-dot"></span>
+          <span class="status-text font-mono">SYSTEM ONLINE // IIT MANDI EE '30</span>
+          <span class="status-sep">|</span>
+          <span class="status-sub font-mono">Kamand, HP</span>
+        </div>
+
+        <!-- Main Title & Typing Subtitle -->
+        <h1 class="hero-title reveal">
+          Hi, I'm <span class="gradient-text">Aman Kumar</span>
+        </h1>
+
+        <div class="hero-dynamic-subtitle reveal">
+          <span class="font-mono prefix">&gt; </span>
+          <span class="typewriter-text font-mono" id="typewriterText">Electrical Engineering @ IIT Mandi</span>
+          <span class="cursor" aria-hidden="true">_</span>
+        </div>
+
+        <!-- Short Punchy Tagline -->
+        <p class="hero-tagline reveal">
+          Focusing on how systems actually work under the hood — from low-level memory and bit representation to clean, scalable software architecture.
+        </p>
+
+        <!-- Key Metrics Strip -->
+        <div class="hero-metrics reveal">
+          <div class="metric-item">
+            <span class="metric-val font-mono">B.Tech EE</span>
+            <span class="metric-lbl">IIT Mandi '30</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-val font-mono">ACM Member</span>
+            <span class="metric-lbl">Design & Dev</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-val font-mono">8+ Projects</span>
+            <span class="metric-lbl">Systems & Web</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-val font-mono">Mechanism-1st</span>
+            <span class="metric-lbl">Learning Ethos</span>
+          </div>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="hero-cta-group reveal">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17l9.2-9.2M17 17V8H8"/>
+            </svg>
+          </a>
+          <a href="https://github.com/kuaman-student" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub Profile</span>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <!-- Terminal Command Quick Copy -->
+        <div class="terminal-quickbar reveal" title="Click to copy terminal contact command" id="terminalQuickBar">
+          <span class="term-prompt font-mono">$</span>
+          <span class="term-command font-mono">curl -sL https://aman.dev/status</span>
+          <span class="term-badge font-mono">ONLINE</span>
+        </div>
+      </div>
+
+      <!-- Scroll Down Cue -->
+      <a href="#about" class="scroll-down-cue" aria-label="Scroll to About section">
+        <span class="scroll-cue-text font-mono">SCROLL</span>
+        <div class="scroll-cue-arrow">
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-prefix font-mono">// 01. INTEL & ROOTS</div>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Bridging low-level hardware principles with modern software craftsmanship.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Profile Card -->
+          <div class="about-card-left reveal">
+            <div class="profile-avatar-frame">
+              <img 
+                src="https://avatars.githubusercontent.com/u/301948178?v=4" 
+                alt="Aman Kumar - Electrical Engineering @ IIT Mandi" 
+                class="profile-avatar"
+                loading="lazy"
+              >
+              <div class="avatar-ring"></div>
+              <div class="avatar-badge font-mono">EE @ IIT MANDI</div>
+            </div>
+
+            <div class="profile-summary-meta">
+              <h3 class="profile-name">Aman Kumar</h3>
+              <p class="profile-title font-mono">Electrical Engineering (2026 – 2030)</p>
+              <div class="profile-college">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span>Indian Institute of Technology Mandi</span>
+              </div>
+            </div>
+
+            <!-- Highlights List -->
+            <div class="profile-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">⚡</span>
+                <div class="highlight-detail">
+                  <span class="highlight-title">ACM Student Chapter</span>
+                  <span class="highlight-sub">UI/UX Designer & Creative Member @ IIT Mandi</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🔬</span>
+                <div class="highlight-detail">
+                  <span class="highlight-title">System Internals</span>
+                  <span class="highlight-sub">Compilers, memory models & bit representation</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✍️</span>
+                <div class="highlight-detail">
+                  <span class="highlight-title">Tech Writer</span>
+                  <span class="highlight-sub">Author @ techgenhub.blogspot.com</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">📍</span>
+                <div class="highlight-detail">
+                  <span class="highlight-title">Location</span>
+                  <span class="highlight-sub">Kamand Valley, Himachal Pradesh, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative & Philosophy -->
+          <div class="about-content-right">
+            <!-- Main narrative block -->
+            <div class="content-block reveal">
+              <h3 class="narrative-heading">
+                First-year Electrical Engineering undergraduate at <span class="highlight-text">IIT Mandi</span> with a strong drive for software engineering, system internals, and practical development.
+              </h3>
+              <p class="narrative-body">
+                I enjoy building functional tools, understanding how compilers and memory behave, and crafting polished user interfaces. Whether writing performant C++ algorithms, developing automation tools with Python and Firebase, or tuning design systems in Figma, I believe in understanding the exact physics of the entire computation stack.
+              </p>
+            </div>
+
+            <!-- Engineering Philosophy Card -->
+            <div class="philosophy-card reveal">
+              <div class="philosophy-header font-mono">
+                <div class="console-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="philosophy-file">PHILOSOPHY.md</span>
+              </div>
+              <div class="philosophy-body">
+                <p class="philosophy-quote">
+                  "Focusing on how systems actually work under the hood — from low-level memory and bit representation to clean, scalable software architecture."
+                </p>
+              </div>
+            </div>
+
+            <!-- Mechanism-First Stepper -->
+            <div class="learning-framework reveal">
+              <h4 class="framework-title font-mono">
+                <span class="accent-symbol">//</span> LEARNING METHODOLOGY: MECHANISM-FIRST
+              </h4>
+              <p class="framework-sub">My mental model for learning complex software and electrical systems:</p>
+
+              <div class="stepper-track">
+                <div class="step-card">
+                  <span class="step-num font-mono">01</span>
+                  <span class="step-label">Why</span>
+                  <span class="step-desc">Underlying problem & purpose</span>
+                </div>
+                <div class="step-arrow font-mono">→</div>
+                <div class="step-card">
+                  <span class="step-num font-mono">02</span>
+                  <span class="step-label">How</span>
+                  <span class="step-desc">Internal mechanism & state flow</span>
+                </div>
+                <div class="step-arrow font-mono">→</div>
+                <div class="step-card">
+                  <span class="step-num font-mono">03</span>
+                  <span class="step-label">Example</span>
+                  <span class="step-desc">Concrete test case & verification</span>
+                </div>
+                <div class="step-arrow font-mono">→</div>
+                <div class="step-card">
+                  <span class="step-num font-mono">04</span>
+                  <span class="step-label">Implement</span>
+                  <span class="step-desc">Production code from scratch</span>
+                </div>
+                <div class="step-arrow font-mono">→</div>
+                <div class="step-card">
+                  <span class="step-num font-mono">05</span>
+                  <span class="step-label">Optimize</span>
+                  <span class="step-desc">Time, memory & architecture</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-prefix font-mono">// 02. ARSENAL</div>
+          <h2 class="section-title">Tech Stack & Systems</h2>
+          <p class="section-subtitle">A curated toolset spanning low-level computing, full-stack web, and visual design.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Languages -->
+          <div class="skill-category-card reveal">
+            <div class="skill-category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Core Languages</h3>
+                <span class="category-subtitle font-mono">Foundation & Algorithms</span>
+              </div>
+            </div>
+            <div class="skill-tags-wrapper">
+              <div class="skill-tag highlight">
+                <span class="skill-icon font-mono">&lt;&gt;</span>
+                <span class="skill-name">C++</span>
+                <span class="skill-meta font-mono">DSA & Systems</span>
+              </div>
+              <div class="skill-tag highlight">
+                <span class="skill-icon font-mono">py</span>
+                <span class="skill-name">Python</span>
+                <span class="skill-meta font-mono">CLI & Automation</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon font-mono">js</span>
+                <span class="skill-name">JavaScript (ES6+)</span>
+                <span class="skill-meta font-mono">Modern Vanilla</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon font-mono">#</span>
+                <span class="skill-name">HTML5</span>
+                <span class="skill-meta font-mono">Semantic</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon font-mono">*</span>
+                <span class="skill-name">CSS3</span>
+                <span class="skill-meta font-mono">Modern Flex/Grid</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Frontend & UI/UX -->
+          <div class="skill-category-card reveal">
+            <div class="skill-category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Frontend & UI/UX</h3>
+                <span class="category-subtitle font-mono">Interfaces & Aesthetics</span>
+              </div>
+            </div>
+            <div class="skill-tags-wrapper">
+              <div class="skill-tag highlight">
+                <span class="skill-icon">🎨</span>
+                <span class="skill-name">Figma</span>
+                <span class="skill-meta font-mono">Prototyping</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon">⚛️</span>
+                <span class="skill-name">React</span>
+                <span class="skill-meta font-mono">Component-Driven</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon">▲</span>
+                <span class="skill-name">Next.js</span>
+                <span class="skill-meta font-mono">Hybrid Web</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon">🌊</span>
+                <span class="skill-name">Tailwind CSS</span>
+                <span class="skill-meta font-mono">Utility-First</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon">⚡</span>
+                <span class="skill-name">Vite</span>
+                <span class="skill-meta font-mono">Fast Tooling</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon">🅱️</span>
+                <span class="skill-name">Bootstrap</span>
+                <span class="skill-meta font-mono">Responsive UI</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon">✨</span>
+                <span class="skill-name">Canva</span>
+                <span class="skill-meta font-mono">Branding & Graphics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Backend & Database -->
+          <div class="skill-category-card reveal">
+            <div class="skill-category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4-3.582 4-8 4-8-1.79-8-4z"></path>
+                  <path d="M4 12c0 2.21 3.582 4 8 4s8-1.79 8-4"></path>
+                  <path d="M4 17c0 2.21 3.582 4 8 4s8-1.79 8-4"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Backend & Cloud</h3>
+                <span class="category-subtitle font-mono">APIs & Data Layers</span>
+              </div>
+            </div>
+            <div class="skill-tags-wrapper">
+              <div class="skill-tag highlight">
+                <span class="skill-icon">🔥</span>
+                <span class="skill-name">Firebase RTDB</span>
+                <span class="skill-meta font-mono">Real-time Cloud</span>
+              </div>
+              <div class="skill-tag highlight">
+                <span class="skill-icon">⚡</span>
+                <span class="skill-name">FastAPI</span>
+                <span class="skill-meta font-mono">Python REST</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon font-mono">{}</span>
+                <span class="skill-name">REST APIs</span>
+                <span class="skill-meta font-mono">Endpoints & JSON</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon">📊</span>
+                <span class="skill-name">Data Analytics</span>
+                <span class="skill-meta font-mono">Pandas & Insights</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Systems & Hardware -->
+          <div class="skill-category-card reveal">
+            <div class="skill-category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Systems & Tools</h3>
+                <span class="category-subtitle font-mono">Engineering & Hardware</span>
+              </div>
+            </div>
+            <div class="skill-tags-wrapper">
+              <div class="skill-tag highlight">
+                <span class="skill-icon">🐧</span>
+                <span class="skill-name">Linux & Bash</span>
+                <span class="skill-meta font-mono">CLI Mastery</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon">🐙</span>
+                <span class="skill-name">Git & GitHub</span>
+                <span class="skill-meta font-mono">Version Control</span>
+              </div>
+              <div class="skill-tag highlight">
+                <span class="skill-icon">🔌</span>
+                <span class="skill-name">Arduino</span>
+                <span class="skill-meta font-mono">Microcontrollers</span>
+              </div>
+              <div class="skill-tag">
+                <span class="skill-icon">⚡</span>
+                <span class="skill-name">Tinkercad</span>
+                <span class="skill-meta font-mono">Circuit Simulation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diagnostic console banner -->
+        <div class="diagnostic-banner reveal">
+          <div class="diagnostic-indicator">
+            <span class="diag-dot"></span>
+            <span class="diag-label font-mono">STACK TELEMETRY:</span>
+          </div>
+          <div class="diagnostic-text font-mono">
+            Full-stack versatility verified across hardware interfaces, systems programming, and modern user experiences.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-prefix font-mono">// 03. ARTIFACTS</div>
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-subtitle">Real-world applications, tools, and system explorations built with purpose.</p>
+        </div>
+
+        <!-- Admin Notice Banner (Visible only in admin mode) -->
+        <div class="admin-notice-banner" id="adminNoticeBanner" style="display: none;">
+          <div class="admin-notice-content">
+            <span class="admin-icon">⚡</span>
+            <div>
+              <strong class="font-mono">ADMIN MODE ACTIVATED:</strong>
+              <span>Displaying both software engineering projects and UI/UX design prototypes.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="projects-filter-bar reveal">
+          <div class="filter-buttons" id="projectFilterButtons">
+            <button class="filter-btn active" data-filter="all">
+              <span class="filter-dot"></span>
+              <span>All Projects</span>
+              <span class="filter-count font-mono" id="countAll">0</span>
+            </button>
+            <button class="filter-btn" data-filter="code">
+              <span class="filter-dot"></span>
+              <span>Code & Systems</span>
+              <span class="filter-count font-mono" id="countCode">0</span>
+            </button>
+            <!-- Design filter button (hidden unless admin mode is active) -->
+            <button class="filter-btn" data-filter="design" id="designFilterBtn" style="display: none;">
+              <span class="filter-dot"></span>
+              <span>UI & Design</span>
+              <span class="filter-count font-mono" id="countDesign">0</span>
+            </button>
+          </div>
+
+          <div class="projects-search-box">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              id="projectSearchInput" 
+              placeholder="Search projects by name, tag, or tech..."
+              aria-label="Search projects"
+            >
+          </div>
+        </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Rendered via script.js from projects.json -->
+          <div class="projects-loading-state font-mono">
+            <span class="loader-spinner"></span>
+            <span>Fetching project manifests from projects.json...</span>
+          </div>
+        </div>
+
+        <!-- Empty Results Message -->
+        <div class="projects-empty-state" id="projectsEmptyState" style="display: none;">
+          <div class="empty-icon font-mono">[ 404 ]</div>
+          <h3 class="empty-title">No matching projects found</h3>
+          <p class="empty-desc">Try clearing the search query or selecting a different category filter.</p>
+          <button class="btn btn-sm btn-outline" id="resetProjectFilters">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB LIVE TELEMETRY SECTION -->
+    <section class="section github-section" id="github">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-prefix font-mono">// 04. LIVE TELEMETRY</div>
+          <h2 class="section-title">GitHub Activity & Metrics</h2>
+          <p class="section-subtitle">Real-time statistics and recent repository activity synced directly from GitHub.</p>
+        </div>
+
+        <!-- GitHub Live Stats Cards -->
+        <div class="github-stats-grid reveal">
+          <div class="gh-stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">📦</span>
+              <span class="stat-label font-mono">PUBLIC REPOSITORIES</span>
+            </div>
+            <div class="stat-number font-mono" id="ghReposCount">--</div>
+            <div class="stat-desc font-mono">Open-source codebases</div>
+          </div>
+
+          <div class="gh-stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">👥</span>
+              <span class="stat-label font-mono">FOLLOWERS</span>
+            </div>
+            <div class="stat-number font-mono" id="ghFollowersCount">--</div>
+            <div class="stat-desc font-mono">Developer network</div>
+          </div>
+
+          <div class="gh-stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">🧭</span>
+              <span class="stat-label font-mono">FOLLOWING</span>
+            </div>
+            <div class="stat-number font-mono" id="ghFollowingCount">--</div>
+            <div class="stat-desc font-mono">Engineers & projects tracked</div>
+          </div>
+
+          <div class="gh-stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">📝</span>
+              <span class="stat-label font-mono">PUBLIC GISTS</span>
+            </div>
+            <div class="stat-number font-mono" id="ghGistsCount">--</div>
+            <div class="stat-desc font-mono">Code snippets & notes</div>
+          </div>
+        </div>
+
+        <!-- GitHub Contributions Chart Card -->
+        <div class="gh-contributions-card reveal">
+          <div class="gh-card-header">
+            <div class="gh-user-info">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span class="gh-username font-mono">kuaman-student</span>
+              <span class="gh-status-tag font-mono">ACTIVE COMMITS</span>
+            </div>
+            <a href="https://github.com/kuaman-student" target="_blank" rel="noopener noreferrer" class="gh-profile-link font-mono">
+              <span>View GitHub Profile</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V8H8"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Contribution chart image embed -->
+          <div class="chart-embed-wrapper">
+            <img 
+              src="https://ghchart.rshah.org/6366f1/kuaman-student" 
+              alt="Aman Kumar's GitHub Contribution Graph" 
+              class="gh-chart-img"
+              loading="lazy"
+              onerror="this.src='https://ghchart.rshah.org/kuaman-student';"
+            >
+          </div>
+          <div class="chart-footer font-mono">
+            <span>Graph synced directly via ghchart telemetry</span>
+            <span class="chart-legend-text">Less ■ ■ ■ ■ ■ More</span>
+          </div>
+        </div>
+
+        <!-- Recent Repositories Grid -->
+        <div class="recent-repos-section reveal">
+          <div class="recent-repos-header">
+            <h3 class="recent-repos-title font-mono">
+              <span class="accent-symbol">//</span> RECENT_REPOSITORIES
+            </h3>
+            <span class="recent-repos-subtitle font-mono">Latest activity stream</span>
+          </div>
+
+          <div class="repos-grid" id="reposGrid">
+            <!-- Populated via script.js -->
+            <div class="repos-loading font-mono">
+              <span class="loader-spinner"></span>
+              <span>Loading recent repository metrics from GitHub API...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-prefix font-mono">// 05. DIRECT LINK</div>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Interested in collaborating on software, engineering research, or design?</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details & Channels -->
+          <div class="contact-info-card reveal">
+            <div class="contact-card-header">
+              <h3 class="contact-heading">Let's build something impactful.</h3>
+              <p class="contact-subtext">
+                Whether you have an interesting system problem, internship opportunity, open-source project, or just want to chat about hardware and low-level code, my inbox is always open.
+              </p>
+            </div>
+
+            <!-- Primary Email Action Box -->
+            <div class="email-action-box">
+              <div class="email-meta">
+                <span class="email-label font-mono">DIRECT INBOX</span>
+                <span class="email-address font-mono" id="emailAddressText">amankr022008@gmail.com</span>
+              </div>
+              <div class="email-buttons">
+                <button class="btn btn-sm btn-primary" id="copyEmailBtn" aria-label="Copy email address to clipboard">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                  </svg>
+                  <span id="copyBtnText">Copy</span>
+                </button>
+                <a href="mailto:amankr022008@gmail.com" class="btn btn-sm btn-outline">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>Mail</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Social Links Grid -->
+            <div class="social-links-grid">
+              <a href="https://github.com/kuaman-student" target="_blank" rel="noopener noreferrer" class="social-card">
+                <div class="social-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="social-info">
+                  <span class="social-name font-mono">GitHub</span>
+                  <span class="social-handle font-mono">@kuaman-student</span>
+                </div>
+                <span class="social-arrow">↗</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/aman-kumar-a94464418/" target="_blank" rel="noopener noreferrer" class="social-card">
+                <div class="social-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div class="social-info">
+                  <span class="social-name font-mono">LinkedIn</span>
+                  <span class="social-handle font-mono">Aman Kumar</span>
+                </div>
+                <span class="social-arrow">↗</span>
+              </a>
+
+              <a href="https://techgenhub.blogspot.com" target="_blank" rel="noopener noreferrer" class="social-card">
+                <div class="social-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                </div>
+                <div class="social-info">
+                  <span class="social-name font-mono">TechGenHub Blog</span>
+                  <span class="social-handle font-mono">techgenhub.blogspot.com</span>
+                </div>
+                <span class="social-arrow">↗</span>
+              </a>
+
+              <a href="https://www.instagram.com/kuaman_2008/" target="_blank" rel="noopener noreferrer" class="social-card">
+                <div class="social-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <div class="social-info">
+                  <span class="social-name font-mono">Instagram</span>
+                  <span class="social-handle font-mono">@kuaman_2008</span>
+                </div>
+                <span class="social-arrow">↗</span>
+              </a>
+            </div>
+
+            <!-- Campus Location Chip -->
+            <div class="location-banner font-mono">
+              <span class="loc-pin">📍</span>
+              <span>Kamand Campus, IIT Mandi, Himachal Pradesh 175005, India</span>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Transmission Form -->
+          <div class="contact-form-card reveal">
+            <div class="form-header">
+              <div class="font-mono form-console-title">
+                <span class="accent-symbol">&gt;</span> DISPATCH_MESSAGE.sh
+              </div>
+              <span class="form-status-indicator font-mono">READY</span>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="contactName" class="form-label font-mono">NAME / CALLSIGN</label>
+                <input 
+                  type="text" 
+                  id="contactName" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="e.g. Linus Torvalds" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label font-mono">RETURN EMAIL ADDRESS</label>
+                <input 
+                  type="email" 
+                  id="contactEmail" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="e.g. engineer@example.com" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label font-mono">SUBJECT / TOPIC</label>
+                <input 
+                  type="text" 
+                  id="contactSubject" 
+                  name="subject" 
+                  class="form-input" 
+                  placeholder="e.g. Collaboration on Systems Project / Internship" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label font-mono">MESSAGE PAYLOAD</label>
+                <textarea 
+                  id="contactMessage" 
+                  name="message" 
+                  rows="5" 
+                  class="form-input form-textarea" 
+                  placeholder="Write your transmission here..." 
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+                <span>Dispatch Transmission</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div class="form-feedback font-mono" id="formFeedback" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo font-mono">
+            <span class="accent-dot">●</span> aman.dev // IIT Mandi
+          </div>
+          <p class="footer-tagline">
+            "Focusing on how systems actually work under the hood — from low-level memory and bit representation to clean, scalable software architecture."
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-col">
+            <span class="footer-col-title font-mono">NAVIGATION</span>
+            <ul class="footer-links">
+              <li><a href="#hero">Intro</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#github">GitHub</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <span class="footer-col-title font-mono">CONNECT</span>
+            <ul class="footer-links">
+              <li><a href="https://github.com/kuaman-student" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/aman-kumar-a94464418/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://techgenhub.blogspot.com" target="_blank" rel="noopener noreferrer">Blog</a></li>
+              <li><a href="https://www.instagram.com/kuaman_2008/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="mailto:amankr022008@gmail.com">Email Direct</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-meta font-mono">
+          <span>&copy; 2026 Aman Kumar. Electrical Engineering, IIT Mandi.</span>
+          <span class="footer-dot">•</span>
+          <span>Vanilla HTML5 / CSS3 / ES6+</span>
+        </div>
+
+        <div class="footer-actions font-mono">
+          <div class="admin-footer-toggle">
+            <span id="footerAdminStatus">Mode: Public</span>
+            <a href="?admin=true" id="adminToggleLink" class="admin-link">[Enable Admin]</a>
+          </div>
+
+          <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top of page">
+            <span>TOP</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script File -->
+  <script src="script.js"></script>
+</body>
+</html>
